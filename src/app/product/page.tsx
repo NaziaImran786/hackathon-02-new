@@ -1,7 +1,8 @@
 // src\app\product\page.tsx
+
 import FilterSection from "@/components/FilterSection";
 import { client } from "@/sanity/lib/client";
-import { Heart, ShoppingCart, ZoomIn, Star } from "lucide-react";
+import { Heart, ShoppingCart, ZoomIn, Star} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -154,9 +155,9 @@ async function Page () {
                                 
               </div>
               <div className="flex items-center gap-x-4">
-                <p className="text-1 text-indigo-900">RS.{item.price}</p>
+                <p className="text-1 text-indigo-900">$.{item.price}</p>
                 <p className="text-red-500 text-1 line-through">
-                  {item.discountPercentage}
+                  {item.discountPercentage}%
                 </p>
                 <div className="flex gap-x-1 items-center mb-1">
                   {products.slice(0, 5).map((_, i) => (
@@ -186,7 +187,7 @@ async function Page () {
             </div>
           </div>
         ))}
-      </div>    
+      </div>          
     </main>
   );
 };

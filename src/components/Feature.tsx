@@ -45,7 +45,7 @@ async function ProductCard () {
         return (
           <Link href={`/product/${item.id}?id=${item.id}&imageUrl=${item.imageUrl}&name=${item.name}&description=${item.description}&price=${item.price}&discountPercentage=${item.discountPercentage}&priceWithoutDiscount=${item.priceWithoutDiscount}&ratingCount=${item.ratingCount}`} key={index}>
           <Card
-            className="relative w-[250px] h-[361px] bg-white shadow-lg hover:bg-[#2F1AC4]"
+            className="relative w-[250px] h-[361px] bg-white shadow-lg hover:bg-[#2F1AC4] "
             key={index}
           >
             {/* Product Image */}
@@ -80,7 +80,7 @@ async function ProductCard () {
 
             {/* Product Price */}
             <div className="absolute top-[90.58%] left-[38.59%] right-[41.11%] text-[#151875] font-bold text-sm text-center">
-              RS.{item.price}
+              $ {item.price}
             </div>
           </Card>
           </Link>

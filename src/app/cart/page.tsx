@@ -67,7 +67,7 @@ function ShoppingCart() {
       {/* Page Header */}
       <div className="bg-[#F6F5FF] py-16">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold text-[#101750] mb-4">FAQ</h1>
+          <h1 className="text-4xl font-bold text-[#101750] mb-4">Cart</h1>
           <div className="flex gap-2 text-sm">
             <Link href="/" className="text-black">
               Home

@@ -1,11 +1,12 @@
 // src/app/product/[productdetail]/page.tsx
 
-import { Star, Facebook, Twitter, Instagram, ShoppingCart } from 'lucide-react'
+import { Star, Facebook, Twitter, Instagram, ShoppingCart, Heart } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import Image from "next/image"
 import Link from "next/link"
 import PostCreator from '@/components/comments'
+// import Whishlist from '../../whishlist/page';
 
 
 export default async function ProductDetails({ searchParams }: {searchParams: Promise<{imageUrl: string ,  category: string , name: string, id: number, price: number, description: string, discountPercentage: number, stokeLevel: number }>}) {
@@ -64,14 +65,20 @@ export default async function ProductDetails({ searchParams }: {searchParams: Pr
                {description}
               </p>
             </div>
-            <div className="flex gap-4">
+            <div className="flex gap-1 lg:gap-4">
             <Link href={`/cart?name=${name}&price=${price}&image=${imageUrl}&description=${description}`}>
-                <Button className="h-12 bg-[#FB2E86] hover:bg-[#fb2e87db] px-8" size="lg">
+                <Button className="h-12 bg-[#FB2E86] hover:bg-[#fb2e87db] px-2" size="lg">
                   <ShoppingCart className="mr-2 h-5 w-5" />
                   Add To Cart
                 </Button>
               </Link>           
              
+              <Link href={`/whishlist?name=${name}&price=${price}&image=${imageUrl}&description=${description}`}>
+                <Button className="h-12 bg-[#FB2E86] hover:bg-[#fb2e87db] px-2" size="lg">
+                  <Heart className="mr-2 h-5 w-5" />
+                  Add To Whishlist
+                </Button>
+              </Link>  
             </div>
             <div className="space-y-4">
               <div className="flex items-center gap-2">
@@ -94,12 +101,16 @@ export default async function ProductDetails({ searchParams }: {searchParams: Pr
                   </Button>
                 </div>
               </div>
-            </div>
+            </div>            
           </div>
         </div>
 
         {/* Product Tabs */}
         <div className="mt-16">
+           {/* comments */}
+           <div className='container mx-auto px-2 lg:px-12 py-12'>
+               <PostCreator blog_id={id}/>
+            </div>
           <Tabs defaultValue="description">
             <TabsList className="w-full justify-start border-b">
               <TabsTrigger value="description" className="text-xl">Description</TabsTrigger>
@@ -117,11 +128,7 @@ export default async function ProductDetails({ searchParams }: {searchParams: Pr
               Additional information content
             </TabsContent>
             <TabsContent value="reviews" className="mt-8">
-              {/* comments */}
-            <div className='container mx-auto px-2 lg:px-12 py-12'>
-               <PostCreator blog_id={id}/>
-            </div>
-
+              Reviews
             </TabsContent>
             <TabsContent value="video" className="mt-8">
               Video content

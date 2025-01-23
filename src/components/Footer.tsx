@@ -1,9 +1,13 @@
+'use client'
 // src\components\Footer.tsx
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { Facebook, Instagram, Twitter } from 'lucide-react'
+import { ArrowUpCircle, Facebook, Instagram, Twitter } from 'lucide-react'
 
 export default function Footer() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
   return (
     <footer className="w-full bg-[#EEEFFB] mt-[130px]">
       <div className="container mx-auto px-4 py-12">
@@ -93,9 +97,17 @@ export default function Footer() {
             >
               <Twitter className="h-4 w-4" />
             </Button>
+             {/* Scroll to Bottom Button */}
+       <button
+        onClick={scrollToTop}
+        className="fixed bottom-8 right-8 text-purple-600 hover:text-purple-700 transition-colors"
+        aria-label="Scroll to top"
+      >
+        <ArrowUpCircle className="h-12 w-12" />
+      </button> 
           </div>
-        </div>
-      </div>
+        </div>        
+      </div>      
     </footer>
   )
 }

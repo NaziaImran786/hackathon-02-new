@@ -57,7 +57,12 @@ async function CategoryCard (){
             {/* Product Name */}
             <div className="absolute top-[69.53%] left-[21.3%] right-[23.04%] text-[#FB2E86] font-lato font-bold text-[18px] text-center">
               {item.name}
-            </div>            
+            </div>  
+
+            {/* Product Price */}
+            <div className="absolute top-[90.58%] left-[38.59%] right-[41.11%] text-[#151875] font-bold text-sm text-center">
+              $ {item.price}
+            </div>          
           </Card>
           </Link>
         );
