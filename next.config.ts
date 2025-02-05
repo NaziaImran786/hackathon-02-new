@@ -9,10 +9,23 @@ const nextConfig: NextConfig = {
         hostname: "cdn.sanity.io",
         port: "",
         pathname: "**",
-        search: "",
+        search: "",        
+      },
+      {
+        protocol: "https",
+        hostname: "randomuser.me",
+        port: "",
+        pathname: "**",
+        search: "",        
       },
     ]
-  }
+  },
 };
 
 export default nextConfig;
+
+
+// module.exports = nextConfig;
+//eslint:{
+//   ignoreDuringBuilds: true
+// }

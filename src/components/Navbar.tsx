@@ -222,7 +222,7 @@ function Navbar() {
               <span>Cart</span>
             </Link>
             <Link
-              href="/wishlist"
+              href="/whishlist"
               className="flex items-center gap-1 text-sm hover:text-[#FB2E86]"
             >
               <HeartIcon className="w-5 h-5" />

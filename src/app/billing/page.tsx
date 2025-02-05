@@ -19,7 +19,7 @@ export default function CheckoutPage() {
       </div>
 
       {/* Main Content */}
-      <main className="container mx-auto px-20 py-16">
+      <main className="container mx-auto px-2 lg:px-20 py-16">
         <h1 className="text-2xl lg:text-4xl font-semibold text-[#101750] mb-6">
           Billing Information
         </h1>
@@ -29,7 +29,7 @@ export default function CheckoutPage() {
         <div className="grid grid-cols-1  ">
           {/* Checkout Form */}
           <div className="lg:col-span-2">
-            <div className="bg-[#eeedfc] p-8 rounded-md">
+            <div className="bg-[#eeedfc] p-3 lg:p-8 rounded-md">
               <div className="mb-12">
                 <h2 className="text-lg font-semibold text-[#1D3178] mb-6">
                   Contact Information

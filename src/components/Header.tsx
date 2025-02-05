@@ -4,6 +4,7 @@
 import { Mail, Phone, ShoppingCart,  } from 'lucide-react'
 import Link from "next/link"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select'
+import { UserButton } from '@clerk/nextjs'
 
 export default function Header() {
   return (
@@ -44,11 +45,12 @@ export default function Header() {
                 <SelectItem value="eur">EUR</SelectItem>
               </SelectContent>
             </Select>
-            <Link href="/login" className='py-2'><button className="text-s">Login</button></Link>
-            <Link href="/whishlist" className='py-2'><button className="text-sm">Wishlist</button></Link>
-            <Link href="/cart" className='py-2'><button className="text-sm">
+            <Link href="/login" className='py-2'><button className="hidden lg:block text-s">Login</button></Link>
+            <Link href="/whishlist" className='py-2'><button className="hidden lg:block text-sm">Wishlist</button></Link>
+            <Link href="/cart" className='py-2'><button className="hidden lg:block text-sm">
               <ShoppingCart className="h-4 w-4" />
             </button></Link>
+            <UserButton  />
           </div>         
         </div>
       </div>

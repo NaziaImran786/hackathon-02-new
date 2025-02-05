@@ -63,7 +63,7 @@ function ShoppingCart() {
   }
 
   return (
-      <div className="w-full mx-auto px-4 ">
+      <div className="w-full mx-auto  ">
       {/* Page Header */}
       <div className="bg-[#F6F5FF] py-16">
         <div className="container mx-auto px-4">
@@ -80,7 +80,7 @@ function ShoppingCart() {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-8 mt-[99px]">
+      <div className="container mx-auto lg:px-4 py-8 mt-[99px]">
         {/* Free Delivery Banner */}
         <div className="mb-8 bg-gray-50 p-4 rounded-lg">
           <div className="flex items-center gap-2">
@@ -105,7 +105,7 @@ function ShoppingCart() {
               {cartItem.map((item: Iproduct, index: number) => {
                 return (
                   <Card key={index}>
-                    <CardContent className="p-6">
+                    <CardContent className="p-2 lg:p-6">
                       <div className="flex gap-6">
                         <div className="w-24 h-24 bg-gray-100 rounded-md">
                           <Image
