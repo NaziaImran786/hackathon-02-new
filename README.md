@@ -20,52 +20,7 @@ Clerk Authentication - Secure authentication system
 Radix UI - Advanced UI components
 Recharts - Data visualization & analytics
 Axios - API calls and data fetching
-📦 Installation & Setup
-1️⃣ Clone the Repository
-bash
-Copy
-Edit
-git clone https://github.com/yourusername/ecommerce-project.git
-cd ecommerce-project
-2️⃣ Install Dependencies
-bash
-Copy
-Edit
-npm install
-# or
-yarn install
-3️⃣ Setup Environment Variables
-Create a .env.local file and add the necessary API keys for Sanity CMS, Clerk Auth, etc.
 
-env
-Copy
-Edit
-NEXT_PUBLIC_SANITY_PROJECT_ID=your_sanity_project_id
-NEXT_PUBLIC_CLERK_FRONTEND_API=your_clerk_api_key
-4️⃣ Start Development Server
-bash
-Copy
-Edit
-npm run dev
-# or
-yarn dev
-The project will be available at http://localhost:3000
-
-🏗️ Build for Production
-bash
-Copy
-Edit
-npm run build
-npm run start
-✅ Scripts Available
-npm run dev → Start the development server
-npm run build → Build for production
-npm run start → Start production server
-npm run lint → Run ESLint checks
-📌 Project Structure
-ruby
-Copy
-Edit
 /ecommerce-project
  ├── pages/            # Next.js pages (API & UI)
  ├── components/       # Reusable UI components
@@ -79,7 +34,7 @@ Edit
  ├── package.json      # Dependencies & scripts
  ├── README.md         # Project documentation
 🌟 Future Enhancements
-✅ Payment Gateway Integration (Stripe, PayPal)
+✅ Payment Gateway Integration (Stripe)
 ✅ Wishlist & Cart Management
 ✅ Admin Dashboard for Product Management
 ✅ SEO & Performance Optimizations
